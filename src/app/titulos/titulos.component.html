@@ -1,1 +1,18 @@
 <h6>Componente para el título {{nombre}}</h6>
+
+<!-- 
+<input type="text" name="text" id="text"  [(ngModel)]="inputContent">
+
+<p>{{inputContent}}</p> -->
+
+<label for="">Correo:
+    <input type="email" [(ngModel)]="correo" >
+</label>
+<br>
+<label for="">Contraseña: 
+    <input type="password" (ngModelChange)="escribirModelo()" [(ngModel)]="password" >
+</label>
+
+<button (dblclick)="ingresar()" class="btn btn-primary">Iniciar</button>
+<br>
+<input type="text" (input)="escribirInput($event)" >

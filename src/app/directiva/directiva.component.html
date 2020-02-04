@@ -9,6 +9,34 @@
 
 <button type="" (click)="alterLoading()" >Mostrar loading</button> -->
 
-<div *ngFor= "let nombre of nombres">
+<!-- <div *ngFor= "let nombre of nombres">
 	<p> Hola mi nombre es: {{nombre}}</p>
+</div> -->
+
+
+<div *ngFor="let producto of productos">
+	<p [ngClass]="{'textoImportante': producto.esImportante, 'textoGrande':producto.textoGrande}">El producto es: {{producto.nombre}} Tenemos dosponibles: {{producto.stock}}  fabricados por {{producto.fabricante}} y vencen el: {{producto.fechaVence}}</p>
 </div>
+
+
+<!-- <div class="tab" [ngSwitch]="pestana">
+	<button (click)="cambiarPestana('perfil')" >perfil</button>
+	<button (click)="cambiarPestana('puntos')">puntos</button>
+	<button (click)="cambiarPestana('info')">info</button>
+	
+	<div class="tabContent">
+		<p *ngSwitchCase="'perfil'">este es el perfil</p>
+		<p *ngSwitchCase="'puntos'">estos son los puntos</p>
+		<p *ngSwitchCase="'info'">esta es la info</p>
+		<p *ngSwitchDefault>seleccione una pestaña</p>
+	</div>
+
+</div> -->
+
+<div [ngClass]="{'cuadrado': mostrarCuadrado}">
+	<p>Este texto debería tener fondo verde</p>
+</div>
+
+<button (click)="alterFondo()" >Alternar fondo</button>
+
+

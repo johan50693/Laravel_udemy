@@ -22,7 +22,7 @@ const routes: Routes = [
     ]
   },
   {path: 'articulo', component: ArticuloComponent},
-  {path: 'articuloDetalle/:nombre/:descripcion/:precio', component: ArticuloDetalleComponent},
+  {path: 'articuloDetalle', component: ArticuloDetalleComponent},
   {path: '**', component: Pagina404Component,},
 ];
 

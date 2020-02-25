@@ -1,5 +1,6 @@
 import { Component, OnInit } from '@angular/core';
 import { ActivatedRoute } from '@angular/router';
+import { Articulo } from '../models/articulo';
 
 @Component({
   selector: 'app-articulo-detalle',
@@ -8,17 +9,13 @@ import { ActivatedRoute } from '@angular/router';
 })
 export class ArticuloDetalleComponent implements OnInit {
 
-  constructor(private ruta:ActivatedRoute) { }
+  constructor(private rutaActiva:ActivatedRoute) { }
   
-  nombre: string;
-  descripcion: string;
-  precio: number;
+  articulo: Articulo;
 
   ngOnInit() {
-    this.nombre= this.ruta.snapshot.params.nombre;
-    this.descripcion= this.ruta.snapshot.params.descripcion;
-    this.precio= this.ruta.snapshot.params.precio;
-    // console.log(this.ruta.snapshot.params.nombre);
+    this.articulo= JSON.parse(this.rutaActiva.snapshot.params.articulo);
+    // console.log(this.articulo);
   }
 
 }

@@ -8,6 +8,12 @@ import { DirectivaComponent } from './directiva/directiva.component';
 import { EjemploComponent } from './ejemplo/ejemplo.component';
 import { PipesComponent } from './pipes/pipes.component';
 import { ContentLargePipe } from './content-large.pipe';
+import { AppRoutingModule } from './app-routing.module';
+import { Pagina404Component } from './pagina404/pagina404.component';
+import { EncabezadoComponent } from './encabezado/encabezado.component';
+import { UsuariosComponent } from './usuarios/usuarios.component';
+import { EditarUsuariosComponent } from './usuarios/editar-usuarios/editar-usuarios.component';
+import { AgregarUsuariosComponent } from './usuarios/agregar-usuarios/agregar-usuarios.component';
 
 @NgModule({
   declarations: [
@@ -16,11 +22,17 @@ import { ContentLargePipe } from './content-large.pipe';
     DirectivaComponent,
     EjemploComponent,
     PipesComponent,
-    ContentLargePipe
+    ContentLargePipe,
+    Pagina404Component,
+    EncabezadoComponent,
+    UsuariosComponent,
+    EditarUsuariosComponent,
+    AgregarUsuariosComponent
   ],
   imports: [
     BrowserModule,
-    FormsModule
+    FormsModule,
+    AppRoutingModule
   ],
   providers: [],
   bootstrap: [AppComponent]

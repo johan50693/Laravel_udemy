@@ -6,13 +6,14 @@
 <p>{{inputContent}}</p> -->
 
 <label for="">Correo:
-    <input type="email" [(ngModel)]="correo" >
+    <input class="form-control" type="email" [(ngModel)]="correo" >
 </label>
 <br>
 <label for="">Contraseña: 
-    <input type="password" (ngModelChange)="escribirModelo()" [(ngModel)]="password" >
+    <input class="form-control " type="password" (ngModelChange)="escribirModelo()" [(ngModel)]="password" >
 </label>
-
+<br>
 <button (dblclick)="ingresar()" class="btn btn-primary">Iniciar</button>
 <br>
-<input type="text" (input)="escribirInput($event)" >
+<br>
+<input class="form-control" type="text" (input)="escribirInput($event)" >
